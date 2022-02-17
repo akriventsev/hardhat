@@ -29,6 +29,7 @@ export async function verifyContract(
   let response: Response;
   try {
     response = await fetch(url, requestDetails);
+    console.log("FETCH RESPONSE \n",response);
   } catch (error: any) {
     throw new NomicLabsHardhatPluginError(
       pluginName,
