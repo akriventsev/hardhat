@@ -13,7 +13,7 @@ export interface EtherscanVerifyRequest extends EtherscanRequest {
   compilerversion: string;
   // This is misspelt in Etherscan's actual API parameters.
   // See: https://etherscan.io/apis#contracts
-  constructorArguements: string;
+  constructorArguments: string;
 }
 
 export interface EtherscanCheckStatusRequest extends EtherscanRequest {
@@ -39,7 +39,7 @@ export function toVerifyRequest(params: {
     codeformat: "solidity-standard-json-input",
     contractname: `${params.sourceName}:${params.contractName}`,
     compilerversion: params.compilerVersion,
-    constructorArguements: params.constructorArguments,
+    constructorArguments: params.constructorArguments,
   };
 }
 
